@@ -49,7 +49,7 @@ gem 'bootsnap', require: false
 gem 'devise', '~> 4.7'
 
 # Add finnhub gem for stock data
-gem 'finnhub_ruby'
+gem 'finnhub_ruby', '~> 1.1.16'
 
 # Add dotenv gem for environment variables
 gem 'dotenv-rails', groups: %i[development test]
@@ -63,9 +63,9 @@ gem 'dotenv-rails', groups: %i[development test]
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
-  # %w[rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support].each do |lib|
-  #   gem lib, git: "https://github.com/rspec/#{lib}.git", branch: 'main'
-  # end
+  %w[rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support].each do |lib|
+    gem lib, git: "https://github.com/rspec/#{lib}.git", branch: 'main'
+  end
 end
 
 group :development do
